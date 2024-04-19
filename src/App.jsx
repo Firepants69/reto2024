@@ -6,7 +6,7 @@ function App() {
   const [mensaje, setMensaje] = useState(contador());
   
   const onClickSound =()=>{
-    const audioElement = new Audio('./cancion.mp3')
+    const audioElement = new Audio('./assets/cancion.mp3')
     audioElement.loop = true;
     audioElement.play()
     var miBoton = document.getElementById("botonRepro");
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <video className="video-background" src='./llamas.mp4' autoPlay loop muted></video>
+      <video className="video-background" src='./assets/llamas.mp4' autoPlay loop muted></video>
       <div className="content">
         <h1>Tiempo sin pajearme:</h1>
         <h1>{mensaje}</h1>
