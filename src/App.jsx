@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <video className="video-background" src='/llamas.mp4' autoPlay loop muted></video>
+      <video className="video-background" src='./llamas.mp4' autoPlay loop muted></video>
       <div className="content">
         <h1>Tiempo sin pajearme:</h1>
         <h1>{mensaje}</h1>
