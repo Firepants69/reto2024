@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { contador } from './restaFecha';
-import llama from './llamas.mp4';
-import sonido from './cancion.mp3'
 
 function App() {
   const [mensaje, setMensaje] = useState(contador());
   useEffect(()=>{
-    const audioElement = new Audio(sonido)
+    const audioElement = new Audio('./assets/cancion.mp3')
     audioElement.loop = true;
     audioElement.play()
     return()=>{
@@ -23,7 +21,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <video className="video-background" src={llama} autoPlay loop muted></video>
+      <video className="video-background" src='./assets/llamas.mp4' autoPlay loop muted></video>
       <div className="content">
         <h1>Tiempo sin pajearme:</h1>
         <h1>{mensaje}</h1>
