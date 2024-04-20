@@ -66,6 +66,7 @@ export function ContadorDePajas() {
           className='btn btn-primary mt-2 me-3' 
           onClick={onClickSound}> Reproducir
         </button>
+        {clase==='contenedorCambio'?<button>hover</button>:null}
         {/*<button 
           id = "botoncaida" 
           className='btn btn-primary mt-2' 
