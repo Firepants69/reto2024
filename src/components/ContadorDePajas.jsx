@@ -5,8 +5,10 @@ import { contador } from '../helpers/restaFecha';
 export function ContadorDePajas() {
   const [mensaje, setMensaje] = useState(contador());
   const [backGroundSound, setBackGroundSound] = useState(null);
+  const [clase,setClase] = useState('d-flex flex-row-reverse prueba')
 
   useEffect(() => {
+    
     // Crea la instancia de Audio cuando el componente se monte
     const audio = new Audio('./assets/cancion.mp3');
     audio.loop = true;
@@ -47,7 +49,9 @@ export function ContadorDePajas() {
 
   return (
     <div className="app-container">
-      <div className='d-flex flex-row-reverse prueba'>
+      <div className={clase}>
+      <button className="position-relative btn btn-primary px-2 me-3 mt-3"
+          onClick={()=>setClase('contenedorCambio')}>x</button>
       <button className="position-relative btn btn-primary p-2 me-3 mt-3">Crear Cuenta</button> 
       <button className="position-relative btn btn-primary p-2 me-3 mt-3">Iniciar Sesion</button>
       <small className="text-justify me-3 mt-3 texto">Inicia sesion o crea una cuenta para tu propio contador</small>
